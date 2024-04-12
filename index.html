@@ -2,129 +2,209 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calendar</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/css/style.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-  <div class="calendar">
-    <header>
-      <div class="mounth">
-        <div class="header-left">
+  <div class="max-w-sm border border-gray-300">
+    <header class="px-3.5 pt-3.5 pb-3.5 border border-b-gray-300">
+      <div class="text-sm font-semibold flex justify-between items-center">
+        <div class="flex">
           <p>August 2021</p>
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-3.5 ml-1 cursor-pointer" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M19 9L12 15L5 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
         </div>
-        <div class="header-right">
-          <button class="btn btn-day">Today</button>
-          <button class="btn btn-left">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <div class="flex items-center justify-center">
+          <button
+            class="w-12 h-4 text-xs mr-3 font-medium border border-gray-300 bg-transparent cursor-pointer outline-none flex items-center justify-center hover:bg-blue-100 active:bg-blue-200">
+            Today
+          </button>
+          <button
+            class="h-4 border border-r-0 border-gray-300  bg-transparent cursor-pointer outline-none flex items-center justify-center hover:bg-blue-100 active:bg-blue-200">
+            <svg class="w-3.5 fill-none items-center" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M15 5L9 12L15 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg>
           </button>
-          <button class="btn btn-right">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <button
+            class="h-4 border border-gray-300 bg-transparent cursor-pointer outline-none flex items-center justify-center hover:bg-blue-100 active:bg-blue-200">
+            <svg class="w-3.5 fill-none items-center" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                 stroke-linejoin="round" />
             </svg>
           </button>
         </div>
       </div>
-      <div class="week">
-        <div class="days"><span>Mon</span>
-          <p>9</p>
+      <div class="w-full m-auto flex justify-between items-center pt-2.5">
+        <div
+          class="text-center leading-5 text-gray-400 text-xs w-full flex  border-b-transparent flex-col items-center cursor-pointer hover:bg-cyan-100 active:bg-cyan-300">
+          <span class="text-gray-800 mt-1.5">Mon</span>
+          <p class="relative mt-1.5 mr-0 mb-3 inline">9</p>
         </div>
-        <div class="days  active">
-          <span>Tue</span>
-          <p>
+        <div
+          class=" border-black bg-cyan-200 text-center leading-5 text-gray-400 text-xs w-full flex  border-b-transparent flex-col items-center cursor-pointer hover:bg-cyan-100 active:bg-cyan-300">
+          <span class="text-gray-800 mt-1.5">Tue</span>
+          <p class="relative mt-1.5 mr-0 mb-3 inline text-gray-800 font-bold">
             10
-            <span class="dot">•</span>
+            <span class="absolute text-lg top-2.5 left-1/2 -translate-x-1/2 font-semibold text-orange-500">•</span>
           </p>
-
         </div>
-        <div class="days"><span>Wed</span>
-          <p>11</p>
+        <div
+          class="text-center leading-5 text-gray-400 text-xs w-full flex  border-b-transparent flex-col items-center cursor-pointer hover:bg-cyan-100 active:bg-cyan-300">
+          <span class="text-gray-800 mt-1.5">Wed</span>
+          <p class="relative mt-1.5 mr-0 mb-3 inline">11</p>
         </div>
-        <div class="days"><span>Thu</span>
-          <p>12</p>
+        <div
+          class="text-center leading-5 text-gray-400 text-xs w-full flex  border-b-transparent flex-col items-center cursor-pointer hover:bg-cyan-100 active:bg-cyan-300">
+          <span class="text-gray-800 mt-1.5">Thu</span>
+          <p class="relative mt-1.5 mr-0 mb-3 inline">12</p>
         </div>
-        <div class="days"><span>Fri</span>
-          <p>13</p>
+        <div
+          class="text-center leading-5 text-gray-400 text-xs w-full flex  border-b-transparent flex-col items-center cursor-pointer hover:bg-cyan-100 active:bg-cyan-300">
+          <span class="text-gray-800 mt-1.5">Fri</span>
+          <p class="relative mt-1.5 mr-0 mb-3 inline">13</p>
         </div>
-        <div class="days"><span>Sat</span>
-          <p>14</p>
+        <div
+          class="text-center leading-5 text-gray-400 text-xs w-full flex border-b-transparent flex-col items-center cursor-pointer hover:bg-cyan-100 active:bg-cyan-300">
+          <span class="text-gray-800 mt-1.5">Sat</span>
+          <p class="relative mt-1.5 mr-0 mb-3 inline">14</p>
         </div>
-        <div class="days"><span>Sun</span>
-          <p>15</p>
+        <div
+          class="ttext-center leading-5 text-gray-400 text-xs w-full flex  border-b-transparent flex-col items-center cursor-pointer hover:bg-cyan-100 active:bg-cyan-300">
+          <span class="text-gray-800 mt-1.5">Sun</span>
+          <p class="relative mt-1.5 mr-0 mb-3 inline">15</p>
         </div>
       </div>
     </header>
-    <div class="main">
-      <div class="main-text">
-        <span>Your Agenda</span>
-        <p>•</p>
-        <p>5 Events</p>
+    <div class="pl-4 pt-4 pb-0 pr-4">
+      <div class="flex items-center">
+        <span class="text-sm font-semibold">Your Agenda</span>
+        <p class="ml-1 text-xs text-gray-500">•</p>
+        <p class="ml-1 text-xs text-gray-500">5 Events</p>
       </div>
-      <div class="search">
-        <div class="search-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <div class="search flex relative border border-gray-400 rounded-lg overflow-hidden mt-2">
+        <div
+          class="border border-r-gray-400 bg-gray-100 w-5 h-6 absolute top-0 flex items-center justify-center cursor-pointer hover:bg-blue-100 active:bg-blue-200">
+          <svg class="w-3.5 fill-none text-gray-800" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <circle cx="11.5" cy="11.5" r="9.5" stroke="currentColor" stroke-width="1.5" />
             <path d="M18.5 18.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
           </svg>
         </div>
-        <div class="search-input">
-          <input type="text" placeholder="Search for events...">
+        <div>
+          <input class="pl-6 text-xs h-5 border-none focus:outline-none " type="text"
+            placeholder="Search for events..." />
         </div>
       </div>
     </div>
-    <div class="footer-time">
-      <div class="footer-notes">
-        <p><span>11:00</span> </p>
-        <p><span>12:00</span></p>
-        <p><span>13:00</span></p>
-        <p><span>14:00</span></p>
-        <p><span>15:00</span></p>
-        <p><span>16:00</span></p>
-        <p><span>17:00</span></p>
-        <p><span>18:00</span></p>
-        <p><span>19:00</span></p>
-        <p><span>20:00</span></p>
-        <p><span>21:00</span></p>
-        <p><span>22:00</span></p>
-        <p><span>23:00</span></p>
+    <div class="footer-time relative h-96 overflow-auto">
+      <div class="footer-notes py-5 px-5">
+        <p
+          class="h-14 m-0 relative z-0 text-gray-500 text-xs after:content-[''] after:border after:border-dashed after:border-b-gray-400 after:absolute after:top-0 after:left-0 after:w-full after:h-px after:z-10">
+          <span class="absolute -top-1.5 z-20 inline-block bg-white py-0 pr-2.5 pl-0">11:00</span>
+        </p>
+        <p
+          class="h-14 m-0 relative z-0 text-gray-500 text-xs after:content-[''] after:border after:border-dashed after:border-b-gray-400 after:absolute after:top-0 after:left-0 after:w-full after:h-px after:z-10">
+          <span class="absolute -top-1.5 z-20 inline-block bg-white py-0 pr-2.5 pl-0">12:00</span>
+        </p>
+        <p
+          class="h-14 m-0 relative z-0 text-gray-500 text-xs after:content-[''] after:border after:border-dashed after:border-b-gray-400 after:absolute after:top-0 after:left-0 after:w-full after:h-px after:z-10">
+          <span class="absolute -top-1.5 z-20 inline-block bg-white py-0 pr-2.5 pl-0">13:00</span>
+        </p>
+        <p
+          class="h-14 m-0 relative z-0 text-gray-500 text-xs after:content-[''] after:border after:border-dashed after:border-b-gray-400 after:absolute after:top-0 after:left-0 after:w-full after:h-px after:z-10">
+          <span class="absolute -top-1.5 z-20 inline-block bg-white py-0 pr-2.5 pl-0">14:00</span>
+        </p>
+        <p
+          class="h-14 m-0 relative z-0 text-gray-500 text-xs after:content-[''] after:border after:border-dashed after:border-b-gray-400 after:absolute after:top-0 after:left-0 after:w-full after:h-px after:z-10">
+          <span class="absolute -top-1.5 z-20 inline-block bg-white py-0 pr-2.5 pl-0">15:00</span>
+        </p>
+        <p
+          class="h-14 m-0 relative z-0 text-gray-500 text-xs after:content-[''] after:border after:border-dashed after:border-b-gray-400 after:absolute after:top-0 after:left-0 after:w-full after:h-px after:z-10">
+          <span class="absolute -top-1.5 z-20 inline-block bg-white py-0 pr-2.5 pl-0">16:00</span>
+        </p>
+        <p
+          class="h-14 m-0 relative z-0 text-gray-500 text-xs after:content-[''] after:border after:border-dashed after:border-b-gray-400 after:absolute after:top-0 after:left-0 after:w-full after:h-px after:z-10">
+          <span class="absolute -top-1.5 z-20 inline-block bg-white py-0 pr-2.5 pl-0">17:00</span>
+        </p>
+        <p
+          class="h-14 m-0 relative z-0 text-gray-500 text-xs after:content-[''] after:border after:border-dashed after:border-b-gray-400 after:absolute after:top-0 after:left-0 after:w-full after:h-px after:z-10">
+          <span class="absolute -top-1.5 z-20 inline-block bg-white py-0 pr-2.5 pl-0">18:00</span>
+        </p>
+        <p
+          class="h-14 m-0 relative z-0 text-gray-500 text-xs after:content-[''] after:border after:border-dashed after:border-b-gray-400 after:absolute after:top-0 after:left-0 after:w-full after:h-px after:z-10">
+          <span class="absolute -top-1.5 z-20 inline-block bg-white py-0 pr-2.5 pl-0">19:00</span>
+        </p>
+        <p
+          class="h-14 m-0 relative z-0 text-gray-500 text-xs after:content-[''] after:border after:border-dashed after:border-b-gray-400 after:absolute after:top-0 after:left-0 after:w-full after:h-px after:z-10">
+          <span class="absolute -top-1.5 z-20 inline-block bg-white py-0 pr-2.5 pl-0">20:00</span>
+        </p>
+        <p
+          class="h-14 m-0 relative z-0 text-gray-500 text-xs after:content-[''] after:border after:border-dashed after:border-b-gray-400 after:absolute after:top-0 after:left-0 after:w-full after:h-px after:z-10">
+          <span class="absolute -top-1.5 z-20 inline-block bg-white py-0 pr-2.5 pl-0">21:00</span>
+        </p>
+        <p
+          class="h-14 m-0 relative z-0 text-gray-500 text-xs after:content-[''] after:border after:border-dashed after:border-b-gray-400 after:absolute after:top-0 after:left-0 after:w-full after:h-px after:z-10">
+          <span class="absolute -top-1.5 z-20 inline-block bg-white py-0 pr-2.5 pl-0">22:00</span>
+        </p>
+        <p
+          class="h-14 m-0 relative z-0 text-gray-500 text-xs after:content-[''] after:border after:border-dashed after:border-b-gray-400 after:absolute after:top-0 after:left-0 after:w-full after:h-px after:z-10">
+          <span class="absolute -top-1.5 z-20 inline-block bg-white py-0 pr-2.5 pl-0">23:00</span>
+        </p>
       </div>
-      <div class="desighnCritique">
-        <p class="del">Desighn Critique</p>
-        <p class="note-time">11:30 - 12:30</p>
+      <div class="desighnCritique border border-solid border-cyan-300 bg-white absolute left-16 rounded-md">
+        <p class="text-gray-400 line-through pt-px pl-2.5 text-xs">
+          Desighn Critique
+        </p>
+        <p class="note-time text-gray-500 mt-2 ml-2.5">
+          11:30 - 12:30
+        </p>
       </div>
-      <div class="Microsoft">
-        <p class="micro-text">Competitor Analisys:Microsoft</p>
-        <p class="note-time">13:00 - 14:00</p>
+      <div class="Microsoft border-none bg-orange-100 rounded-md h-14 absolute left-16">
+        <p class="text-gray-900 font-semibold mt-1 ml-2.5 text-xs">
+          Competitor Analisys:Microsoft
+        </p>
+        <p class="note-time text-gray-500 mt-2 ml-2.5">
+          13:00 - 14:00
+        </p>
       </div>
-      <div class="Ateam">
-        <p class="micro-text">Project A Team M</p>
-        <p class="note-time">15:40 - 17:40</p>
+      <div class="Ateam bg-blue-100 border-2 border-solid border-blue-600 rounded-md w-32 h-28 absolute left-16">
+        <p class="text-gray-900 font-semibold mt-1 ml-2.5 text-xs">
+          Project A Team M
+        </p>
+        <p class="note-time text-gray-500 mt-2 ml-2.5">
+          15:40 - 17:40
+        </p>
       </div>
-      <div class="Bteam">
-        <p class="micro-text">Project B Team M</p>
-        <p class="note-time">15:40 - 17:40</p>
+      <div class="Bteam bg-blue-100 absolute left-56 rounded-md w-32 h-28">
+        <p class="text-gray-900 font-semibold mt-1 ml-2.5 text-xs">
+          Project B Team M
+        </p>
+        <p class="note-time text-gray-500 mt-2 ml-2.5">
+          15:40 - 17:40
+        </p>
       </div>
-      <div class="Bproject">
-        <p class="micro-text">Project B</p>
-        <p class="note-time">17:30 - 18:00</p>
+      <div class="Bproject bg-blue-100 border-2 border-solid border-white rounded-md w-24 absolute left-64">
+        <p class=" text-gray-900 font-semibold mt-1 ml-2.5 text-xs">
+          Project B
+        </p>
+        <p class="note-time text-gray-500 -mt-1 ml-2.5">
+          17:30 - 18:00
+        </p>
       </div>
-      <div class="line">
-        <p><span>•</span></p>
+      <div class="line py-5 pr-0 pl-8 absolute top-64 left-5 z-0">
+        <p
+          class="text-3xl text-orange-400 m-0 relative z-0 after:content-[''] after:absolute after:-top-1 after:left-2 after:w-11/12 after:h-px after:border-2 after:border-b after:border-solid after:border-orange-400 after:z-10">
+          <span class="absolute z-20 inline-block p-0">•</span>
+        </p>
       </div>
     </div>
   </div>
